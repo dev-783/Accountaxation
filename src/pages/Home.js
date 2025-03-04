@@ -2,10 +2,16 @@ import React from 'react';
 import '../styles/Home.css';
 import { Link } from 'react-router';
 import IconList from "../components/IconList";
+import { Helmet } from 'react-helmet';
 
 function Home() {
   return (
     <div className="home">
+      <Helmet>
+        <title>Accountaxation | Expert Tax & Accounting Services</title>
+        <meta name="description" content="Affordable taxation, accounting, and registration services across India. Contact us 24/7 for expert support!" />
+        <meta name="keywords" content="tax services, accounting, GST registration, India" />
+      </Helmet>
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
