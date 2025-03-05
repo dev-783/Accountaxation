@@ -13,8 +13,9 @@ function Footer() {
             <img src={logo} alt="Company Logo" ></img>
           </div>
           <p>
-            Your company description goes here. Provide a brief but informative
-            summary of your business, services, and values.
+          Accountaxation, a trusted name in financial excellence, offers 
+          expert services in registrations, taxation, and financial strategies,
+          ensuring your business thrives with precision and confidence.
           </p>
         </div>
 
