@@ -25,9 +25,9 @@ function Home() {
            <div className="hero-content-wrapper"> {/* Limits content width */}
 
             <div className="hero-headings">
-                <h2 className="hero-title">
+                <h1 className="hero-title">
                 {title}
-                </h2>
+                </h1>
                 <h3 className="hero-subtitle">
                 {subtitle}
                 </h3>
