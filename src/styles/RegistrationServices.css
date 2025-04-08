@@ -1,0 +1,204 @@
+/* src/styles/RegistrationServices.css */
+
+/* --- Import variables if you have a central variables file --- */
+/* @import './variables.css'; */
+
+/* --- Use existing variables or define them --- */
+:root {
+  --teal-primary: #1E5A6C;
+  --dark-blue-text: #0D3040;
+  --white-text: #ffffff;
+  --light-gray-bg: #f8f9fa;
+  --text-color: #333;
+  --link-color: #1a73e8; /* Standard link blue */
+  --heading-font: 'Poppins', sans-serif; /* Assuming Poppins is used */
+  --body-font: 'Roboto', sans-serif; /* Example body font */
+}
+
+.registration-services-page { /* Also used by Taxation/Accounting pages */
+  font-family: var(--body-font);
+  color: var(--text-color);
+}
+
+/* Page Header Styles */
+.page-header { /* General page header class */
+  background-color: var(--teal-primary); /* Or a different color/gradient */
+  color: var(--white-text);
+  padding: 4rem 0; /* Adjust padding as needed */
+  text-align: center;
+  margin-bottom: 3rem;
+}
+/* Specific header overrides if needed */
+/* .registration-header {} */
+/* .taxation-header {} */
+/* .accounting-header {} */
+
+
+.page-header h1 {
+  font-family: var(--heading-font);
+  font-size: 2.8rem; /* Adjust size */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.page-header .subtitle {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+/* Services Content Section */
+.services-content {
+  padding-bottom: 3rem;
+}
+
+/* Individual Service Item Layout */
+.service-item {
+  display: flex;
+  flex-direction: column; /* Stack image and text on small screens */
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee; /* Optional separator */
+}
+
+.service-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.service-image {
+  width: 100%; /* Full width on small screens */
+  max-width: 400px; /* Max width for the image */
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px; /* Optional rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  align-self: center; /* Center image when stacked */
+}
+
+.service-text {
+  flex: 1; /* Allows text to take remaining space */
+}
+
+.service-text h2 {
+  font-family: var(--heading-font);
+  color: var(--dark-blue-text);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.service-text p {
+  line-height: 1.7;
+  margin-bottom: 1rem; /* Space below paragraph */
+}
+
+.service-text ul {
+    list-style: disc;
+    padding-left: 25px;
+    margin-top: 1rem;
+}
+
+.service-text li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- NEW: Styles for the service-specific contact link --- */
+.service-contact-link {
+  display: inline-block; /* Allow padding and margins */
+  margin-top: 1rem; /* Space above the link */
+  padding: 0.5rem 1rem; /* Button-like padding */
+  background-color: transparent;
+  color: var(--teal-primary); /* Use theme color */
+  border: 1px solid var(--teal-primary); /* Border with theme color */
+  border-radius: 4px; /* Match other buttons/elements */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  text-align: center;
+}
+
+.service-contact-link:hover,
+.service-contact-link:focus {
+  background-color: var(--teal-primary); /* Fill on hover */
+  color: var(--white-text); /* White text on hover */
+  text-decoration: none; /* Remove underline on hover */
+  outline: none;
+}
+/* --- End NEW Styles --- */
+
+
+/* Call to Action Section */
+.cta-section {
+    background-color: var(--light-gray-bg); /* Light background */
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-family: var(--heading-font);
+    color: var(--dark-blue-text);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Use existing button styles if available, or define here */
+.cta-section .cta-button {
+  display: inline-block;
+  padding: 0.8rem 2rem; /* Slightly larger padding */
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 4px; /* Consistent radius */
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.cta-section .cta-primary-teal {
+  background-color: var(--teal-primary); /* Use primary color */
+  color: var(--white-text);
+  border-color: var(--teal-primary);
+}
+.cta-section .cta-primary-teal:hover {
+    background-color: var(--dark-blue-text); /* Darken on hover */
+    border-color: var(--dark-blue-text);
+    opacity: 1; /* Override potential opacity from home */
+}
+
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .service-item {
+    flex-direction: row; /* Image and text side-by-side */
+    align-items: flex-start; /* Align items to the top */
+    gap: 2.5rem; /* Increase gap */
+  }
+
+  .service-image {
+    width: 35%; /* Adjust image width */
+    max-width: 350px; /* Adjust max width */
+    align-self: flex-start; /* Align image to top */
+  }
+
+  .page-header h1 {
+    font-size: 3.2rem;
+  }
+}
+
+@media (min-width: 992px) {
+    .service-text h2 {
+        font-size: 2rem;
+    }
+}

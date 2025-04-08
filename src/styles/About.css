@@ -1,0 +1,211 @@
+/* src/styles/About.css */
+
+/* --- Import or define variables --- */
+:root {
+  --teal-primary: #1E5A6C;
+  --dark-blue-text: #0D3040;
+  --white-text: #ffffff;
+  --light-gray-bg: #f8f9fa;
+  --text-color: #333;
+  --heading-font: 'Poppins', sans-serif;
+  --body-font: 'Roboto', sans-serif;
+}
+
+.about-page {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  line-height: 1.7; /* Improve readability */
+}
+
+/* --- Page Header --- */
+/* Reuse .page-header styles if defined globally, or copy/adapt */
+.page-header.about-header {
+  background-color: var(--teal-primary); /* Or a different theme color/gradient */
+  color: var(--white-text);
+  padding: 4rem 0;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  font-family: var(--heading-font);
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.page-header .subtitle {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+/* --- Main Content Area --- */
+.about-content {
+  padding: 2rem 0 4rem 0; /* Padding top and bottom */
+}
+
+/* Grid for text and image */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Stack by default */
+  gap: 2.5rem; /* Gap between text and image */
+  align-items: center; /* Vertically align items */
+  margin-bottom: 3rem; /* Space below grid */
+}
+
+.about-text h2 {
+  font-family: var(--heading-font);
+  color: var(--dark-blue-text);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+.about-text strong {
+    color: var(--teal-primary); /* Highlight strong text */
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission/Vision section */
+.mission-vision {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--light-gray-bg);
+    border-left: 4px solid var(--teal-primary);
+    border-radius: 4px;
+}
+
+.mission-vision h3 {
+    font-family: var(--heading-font);
+    color: var(--dark-blue-text);
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+.mission-vision p {
+    margin-bottom: 0;
+    font-style: italic;
+    color: #555;
+}
+
+
+/* Why Choose Us Section */
+.why-choose-us {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee; /* Separator */
+}
+
+.why-choose-us h2 {
+  font-family: var(--heading-font);
+  color: var(--dark-blue-text);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center; /* Center heading */
+}
+
+.why-choose-us ul {
+  list-style: none;
+  padding: 0;
+  max-width: 800px; /* Limit width for readability */
+  margin: 0 auto; /* Center the list */
+}
+
+.why-choose-us li {
+  display: flex;
+  align-items: flex-start; /* Align icon and text to top */
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.why-choose-us svg {
+  width: 1.5em; /* Icon size */
+  height: 1.5em;
+  fill: var(--teal-primary); /* Icon color */
+  margin-right: 1rem; /* Space between icon and text */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+  margin-top: 0.1em; /* Fine-tune vertical alignment */
+}
+
+/* Team Section Placeholder Style */
+.team-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #f1f1f1; /* Slightly different background */
+    border-radius: 8px;
+    text-align: center;
+}
+.team-section h2 {
+    font-family: var(--heading-font);
+    color: var(--dark-blue-text);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+/* --- Call to Action Section --- */
+/* Reuse .cta-section styles if defined globally, or copy/adapt */
+.cta-section.about-cta {
+    background-color: var(--light-gray-bg);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-family: var(--heading-font);
+    color: var(--dark-blue-text);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Reuse button styles */
+.cta-section .cta-button.cta-primary-teal {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background-color: var(--teal-primary);
+  color: var(--white-text);
+  border-color: var(--teal-primary);
+}
+.cta-section .cta-button.cta-primary-teal:hover {
+    background-color: var(--dark-blue-text);
+    border-color: var(--dark-blue-text);
+    opacity: 1;
+}
+
+/* --- Responsive Adjustments --- */
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1.2fr 1fr; /* Text slightly wider than image */
+  }
+  .page-header h1 {
+      font-size: 3.2rem;
+  }
+}
+

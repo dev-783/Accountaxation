@@ -1,76 +1,166 @@
+/* src/styles/Contact.css */
+
 .contact-page {
-    padding-top: 20px; /* Adjust based on your header height */
-  }
-  
-  .contact-header {
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    margin-bottom: 50px;
-  }
-  
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-    margin: 40px 0;
-  }
-  
-  .contact-info {
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 8px;
-  }
-  
-  .info-item {
-    margin: 20px 0;
-  }
-  
-  .info-item h3 {
-    color: #1e3c72;
-    margin-bottom: 5px;
-  }
-  
-  .info-item a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .contact-form {
-    padding: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  .submit-btn {
-    background: #1e3c72;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .submit-btn:hover {
-    background: #2a5298;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+  padding-top: 20px; /* Adjust based on your header height */
+  padding-bottom: 50px; /* Add some padding at the bottom */
+}
+
+.contact-header {
+  /* Consider using your theme variable if defined elsewhere */
+  background: linear-gradient(135deg, var(--teal-primary, #1E5A6C) 0%, var(--dark-blue-text, #0D3040) 100%); /* Example using variables */
+  color: white;
+  text-align: center;
+  padding: 40px 20px; /* Increased padding slightly */
+  margin-bottom: 50px;
+  /* border-radius: 0 0 8px 8px; Optional: slight rounding at bottom */
+}
+
+.contact-header h1 {
+    margin-bottom: 0.5rem; /* Add space below h1 */
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr; /* Give slightly more space to form */
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.contact-info {
+  padding: 30px; /* Increased padding */
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #eee; /* Subtle border */
+}
+
+.contact-info h2, .contact-form h2 {
+    font-family: var(--heading-font, 'Poppins', sans-serif); /* Use heading font */
+    color: var(--dark-blue-text, #0D3040);
+    margin-bottom: 1.5rem; /* Space below heading */
+}
+
+.info-item {
+  margin-bottom: 25px; /* Increased spacing */
+}
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-item h3 {
+  color: var(--teal-primary, #1E5A6C); /* Use theme color */
+  margin-bottom: 8px; /* Increased space */
+  font-size: 1.1rem;
+}
+
+.info-item a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease; /* Add hover effect */
+}
+.info-item a:hover {
+    color: var(--teal-primary, #1E5A6C);
+}
+
+.contact-form {
+  padding: 20px; /* Keep padding or adjust as needed */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px; /* Slightly more padding */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem; /* Use rem for better scaling */
+  font-family: inherit; /* Inherit font from body/page */
+  box-sizing: border-box; /* Include padding and border in element's total width/height */
+  transition: border-color 0.2s ease; /* Add focus transition */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--teal-primary, #1E5A6C); /* Highlight border on focus */
+    outline: none; /* Remove default browser outline */
+    box-shadow: 0 0 0 2px rgba(30, 90, 108, 0.2); /* Optional: subtle focus shadow */
+}
+
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resize, disable horizontal */
+    min-height: 120px; /* Set a minimum height */
+}
+
+.submit-btn {
+  background: var(--teal-primary, #1E5A6C); /* Use theme color */
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600; /* Make text bolder */
+  transition: background-color 0.2s ease, opacity 0.2s ease; /* Add transition */
+  margin-top: 10px; /* Add some space above button */
+}
+
+.submit-btn:hover {
+  background: var(--dark-blue-text, #0D3040); /* Darker shade on hover */
+}
+
+/* Style for disabled button state */
+.submit-btn:disabled {
+    background-color: #cccccc; /* Grey background */
+    color: #666666; /* Darker grey text */
+    cursor: not-allowed; /* Indicate non-interactive state */
+    opacity: 0.7;
+}
+
+/* --- NEW: Styles for Status Messages --- */
+.success-msg,
+.error-msg {
+  margin-top: 15px; /* Space above the message */
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.success-msg {
+  color: #155724; /* Dark green text */
+  background-color: #d4edda; /* Light green background */
+  border: 1px solid #c3e6cb; /* Green border */
+}
+
+.error-msg {
+  color: #721c24; /* Dark red text */
+  background-color: #f8d7da; /* Light red background */
+  border: 1px solid #f5c6cb; /* Red border */
+}
+/* --- End Status Message Styles --- */
+
+/* Responsive Design */
+@media (max-width: 992px) { /* Adjust breakpoint if needed */
     .contact-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1.5fr; /* Adjust ratio for tablets */
+      gap: 30px;
     }
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+    gap: 30px; /* Reduce gap */
   }
+  .contact-info {
+      padding: 20px; /* Adjust padding */
+      margin-bottom: 20px; /* Add space when stacked */
+  }
+  .contact-header {
+      padding: 30px 15px;
+  }
+}
+
