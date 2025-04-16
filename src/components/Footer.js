@@ -41,9 +41,10 @@ function Footer() {
         <div className="footer-section">
           <h4>Services</h4>
           <ul>
-            <li><Link to="/registration">Registration</Link></li>
-            <li><Link to="/taxation">Taxation</Link></li>
-            <li><Link to="/audit">Audit</Link></li>
+            <li><Link to="/services/registration">Registration</Link></li>
+            <li><Link to="/services/taxation">Taxation</Link></li>
+            <li><Link to="/services/audit">Audit</Link></li>
+            <li><Link to="/services/epf">EPF Services</Link></li>
           </ul>
         </div>
 
