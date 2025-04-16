@@ -61,7 +61,8 @@ function Footer() {
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        <p>© 2024 Accountaxation. All rights reserved.</p>
+        <p>© 2025 Accountaxation. All rights reserved.</p>
+        <p className="footer-section">Developed by <a href="https://x.com/bhargav_022" target="_blank" rel="noreferrer">Bhargav</a></p>
       </div>
     </footer>
   );
