@@ -49,7 +49,7 @@ function Home() {
       </section>
 
       {/* Services Section - Updated Cards */}
-      <section className="services">
+      <section className="services" id="services-section">
         <div className="container">
           <h2 className='services-h2'>Our Services</h2>
           <div className="services-grid">
@@ -104,6 +104,21 @@ function Home() {
                </div>
              </Link>
              {/* --- End Service Card 3 --- */}
+
+             <Link to="/services/epf" className="service-card-link">
+               <div className="service-card">
+                 <img src="https://media.assettype.com/outlookbusiness/import/uploadimage/library/16_9/16_9_5/IMAGE_1649068012.webp?w=640&auto=format%2Ccompress&fit=max&format=webp&dpr=1.0" alt="EPF Services" />
+                 <h3 className='services-h3'>EPF Services</h3>
+                 <ul className="list-items">
+                     <li>PF Withdrawal</li>
+                     <li>UAN Activation</li>
+                     <li>Account Transfer</li>
+                     <li>Aadhar Link</li>
+                     <li>Passbook</li>
+                     <li>Track Claim</li>
+                 </ul>
+               </div>
+             </Link>
 
           </div>
         </div>
