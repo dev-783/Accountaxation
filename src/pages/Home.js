@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Home.css';
-import { Link } from 'react-router-dom'; // Link is already imported
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 function Home() {
@@ -54,7 +54,7 @@ function Home() {
           <h2 className='services-h2'>Our Services</h2>
           <div className="services-grid">
 
-             {/* --- Service Card 1: Wrapped in Link --- */}
+             {/* --- Existing Service Card 1: Registration --- */}
              <Link to="/services/registration" className="service-card-link">
                <div className="service-card">
                  <img src="https://snthanvi.in/wp-content/uploads/2024/02/1.webp" alt="Registration Services" />
@@ -69,9 +69,7 @@ function Home() {
                  </ul>
                </div>
              </Link>
-             {/* --- End Service Card 1 --- */}
-
-             {/* --- Service Card 2: Wrapped in Link --- */}
+             {/* --- Existing Service Card 2: Taxation --- */}
              <Link to="/services/taxation" className="service-card-link">
                <div className="service-card">
                  <img src="https://snthanvi.in/wp-content/uploads/2024/01/heap-of-american-money-cash-and-vintage-light-box.jpg" alt="Taxation Services" />
@@ -86,9 +84,7 @@ function Home() {
                  </ul>
                </div>
              </Link>
-             {/* --- End Service Card 2 --- */}
-
-             {/* --- Service Card 3: Wrapped in Link --- */}
+             {/* --- Existing Service Card 3: Accounting --- */}
              <Link to="/services/accounting" className="service-card-link">
                <div className="service-card">
                  <img src="https://snthanvi.in/wp-content/uploads/2024/02/2.webp" alt="Accounting Services" />
@@ -103,8 +99,7 @@ function Home() {
                  </ul>
                </div>
              </Link>
-             {/* --- End Service Card 3 --- */}
-
+             {/* --- Existing Service Card 4: EPF Services --- */}
              <Link to="/services/epf" className="service-card-link">
                <div className="service-card">
                  <img src="https://media.assettype.com/outlookbusiness/import/uploadimage/library/16_9/16_9_5/IMAGE_1649068012.webp?w=640&auto=format%2Ccompress&fit=max&format=webp&dpr=1.0" alt="EPF Services" />
@@ -119,6 +114,108 @@ function Home() {
                  </ul>
                </div>
              </Link>
+
+             {/* --- New Service Card 1: Domestic Business - Incorporation --- */}
+             <Link to="/services/business-incorporation" className="service-card-link">
+               <div className="service-card">
+                 <img src="https://i.ibb.co/tTJ2S3XG/image-2.png" alt="Business Incorporation Services" /> {/* Replace with an appropriate image URL */}
+                 <h3 className='services-h3'>BUSINESS INCORPORATION</h3>
+                 <ul className="list-items">
+                     <li>Public Limited Company</li>
+                     <li>Private Limited Company</li>
+                     <li>One Person Company</li>
+                     <li>Section 8 Company</li>
+                     <li>LIAISON OFFICE</li>
+                     <li>And More...</li> {/* Indicate more services on the dedicated page */}
+                 </ul>
+               </div>
+             </Link>
+             {/* --- End New Service Card 1 --- */}
+
+             {/* --- New Service Card 2: Bookkeeping (Detailed) --- */}
+             <Link to="/services/detailed-bookkeeping" className="service-card-link">
+               <div className="service-card">
+                 <img src="https://i.ibb.co/Xrd5XSnq/image-3.png" alt="Detailed Bookkeeping Services" /> {/* Replace with an appropriate image URL */}
+                 <h3 className='services-h3'>DETAILED BOOKKEEPING</h3>
+                 <ul className="list-items">
+                     <li>Onsite/Remote Accounting</li>
+                     <li>Tax Compliances Filing</li>
+                     <li>Payroll Management</li>
+                     <li>Stock Management</li>
+                     <li>Financial Budgeting</li>
+                     <li>And More...</li>
+                 </ul>
+               </div>
+             </Link>
+             {/* --- End New Service Card 2 --- */}
+
+             {/* --- New Service Card 3: Income Tax (Advanced) --- */}
+             <Link to="/services/advanced-income-tax" className="service-card-link">
+               <div className="service-card">
+                 <img src="https://taxguru.in/wp-content/uploads/2021/09/On-a-white-tablet-the-inscription-Income-Tax-on-the-background-of-accounting.jpg" alt="Advanced Income Tax Services" /> {/* Replace with an appropriate image URL */}
+                 <h3 className='services-h3'>ADVANCED INCOME TAX</h3>
+                 <ul className="list-items">
+                     <li>Income Tax Assessments</li>
+                     <li>Income Tax Notice & Rectifications</li>
+                     <li>Exemption & Deduction Certifications</li>
+                     <li>Valuations & Certifications</li>
+                     <li>Income Tax Appeals & Revisions</li>
+                     <li>And More...</li>
+                 </ul>
+               </div>
+             </Link>
+             {/* --- End New Service Card 3 --- */}
+
+             {/* --- New Service Card 4: Industry Audit --- */}
+             <Link to="/services/industry-audit" className="service-card-link">
+               <div className="service-card">
+                 <img src="https://images.shiksha.com/mediadata/shikshaOnline/mailers/2021/naukri-learning/oct/28oct/What-is-AUDIT.jpg" alt="Industry Audit Services" /> {/* Replace with an appropriate image URL */}
+                 <h3 className='services-h3'>INDUSTRY AUDIT</h3>
+                 <ul className="list-items">
+                     <li>Income Tax Audit</li>
+                     <li>Secretarial Audit</li>
+                     <li>Public Limited Audit</li>
+                     <li>Private Limited Audit</li>
+                     <li>Financial Statement Audit</li>
+                     <li>And More...</li>
+                 </ul>
+               </div>
+             </Link>
+             {/* --- End New Service Card 4 --- */}
+
+             {/* --- New Service Card 5: Goods & Service Tax (Advanced) --- */}
+             <Link to="/services/advanced-gst" className="service-card-link">
+               <div className="service-card">
+                 <img src="https://www.adanirealty.com/-/media/Project/Realty/Blogs/positive-and-negative-impact-of-gst-on-the-real-estate-industry" alt="Advanced GST Services" /> {/* Replace with an appropriate image URL */}
+                 <h3 className='services-h3'>ADVANCED GST</h3>
+                 <ul className="list-items">
+                     <li>GST Cancellation & Revocation</li>
+                     <li>GST Returns & Other Filing</li>
+                     <li>GST Compliance Set-up & Management</li>
+                     <li>GST Periodical Review & Reconciliations</li>
+                     <li>GST Refunds</li>
+                     <li>And More...</li>
+                 </ul>
+               </div>
+             </Link>
+             {/* --- End New Service Card 5 --- */}
+
+             {/* --- New Service Card 6: Corporate Regulatory Affairs --- */}
+             <Link to="/services/corporate-regulatory" className="service-card-link">
+               <div className="service-card">
+                 <img src="https://miro.medium.com/v2/resize:fit:740/1*BYhk79WAmo7DRJmlFLhmVg.jpeg" alt="Corporate Regulatory Affairs" /> {/* Replace with an appropriate image URL */}
+                 <h3 className='services-h3'>CORPORATE REGULATORY AFFAIRS</h3>
+                 <ul className="list-items">
+                     <li>Annual Filing of Companies</li>
+                     <li>Annual Filing of LLP</li>
+                     <li>Company / LLP Strike Off</li>
+                     <li>Transfer & Transmission of Shares</li>
+                     <li>Increase of Share Capital</li>
+                     <li>And More...</li>
+                 </ul>
+               </div>
+             </Link>
+             {/* --- End New Service Card 6 --- */}
 
           </div>
         </div>

@@ -8,6 +8,19 @@ import '../styles/About.css'; // Using existing CSS
 const aboutImagePlaceholder = 'https://placehold.co/600x400/1E5A6C/FFFFFF?text=About+Accountaxation';
 
 function About() {
+  const teamMembers = [
+    { name: "GAGANDEEP SINGH", profession: "CHARTERED ACCOUNTANT" },
+    { name: "ANKIT JAISWAL", profession: "CHARTERED ACCOUNTANT" },
+    { name: "AMAN SINGH", profession: "COMPANY SECRETARY" },
+    { name: "RAJNI MIGLANI", profession: "COMPANY SECRETARY" },
+    { name: "SUNIL KUMAR", profession: "ADVOCATE" },
+    { name: "PBA SRINIVASAN", profession: "ADVOCATE" },
+    { name: "KARAN SONI", profession: "COMPANY SECRETARY" },
+    { name: "PRACHI GOEL", profession: "CHARTERED ACCOUNTANT" },
+    { name: "MANISH BAJAJ", profession: "CHARTERED ACCOUNTANT" },
+    { name: "HARPREET SINGH", profession: "ADVOCATE" },
+    { name: "GANAT JUNEJA", profession: "ADVOCATE" }
+  ];
   return (
     <div className="about-page">
       <Helmet>
@@ -34,22 +47,19 @@ function About() {
             <div className="about-text">
               <h2>Who We Are</h2>
               <p>
-                Accountaxation services specializes in: Taxation, Accountancy & Corporate services
-                in accordance with relevant law and accounting standards. We offer tax advisory,
-                ledger keeping, payroll and personnel management, as well as services related to
-                companies and enterprises with various business statuses, catering to both
-                businesses and individuals.
+              ACCOUNTAXATION SERVICES is a long-lasting business consulting firm specialized in Start-Ups, Corporate Laws, Taxation (Direct & Indirect), International Taxation, GST Accounting, Import Export, Govt Registration & Licenses, Transfer Pricing, Transaction Advisory, Book Keeping, Audit and Assurance, Business Registrations, and Corporate Financial and Risk Advisory
               </p>
               <p>
                 Our commitment is to work <strong>with you, not just for you</strong>. We believe in building partnerships
                 based on trust and understanding your unique needs.
+                Our team of experts offers solutions to meet individual client needs in today's market[cite: 3]. [cite_start]As a Trusted Partner, we prioritize exceptional customer service and aim to be with you at every step of the way
               </p>
 
               {/* Optional: Add Mission/Vision */}
               <div className="mission-vision">
                  <h3>Our Mission</h3>
                  <p>
-                   [Placeholder: Briefly state your company's primary mission, e.g., To simplify finance and compliance for Indian businesses and individuals through expert, accessible, and reliable services.]
+                  Our mission revolves around providing essential support and solutions to businesses to ensure their operations run smoothly and efficiently. We ensure client satisfaction by delivering high-quality services, consult clients to achieve operational efficiency , and combine global capabilities with local market knowledge.
                  </p>
                  {/* <h3>Our Vision</h3>
                  <p>
@@ -96,11 +106,19 @@ function About() {
             </ul>
           </div>
 
-          {/* Optional: Team Section Placeholder */}
-          {/* <div className="team-section">
+
+          <div className="team-section">
             <h2>Meet Our Team</h2>
-            <p>[Placeholder: Briefly introduce key team members or mention the team's collective experience. You could add photos later.]</p>
-          </div> */}
+            <p>Our firm is powered by a dedicated team of highly qualified and experienced professionals.</p>
+            <div className="team-grid">
+              {teamMembers.map((member, index) => (
+                <div key={index} className="team-member-card">
+                  <h4>{member.name}</h4>
+                  <p>{member.profession}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
         </div>
       </section>
